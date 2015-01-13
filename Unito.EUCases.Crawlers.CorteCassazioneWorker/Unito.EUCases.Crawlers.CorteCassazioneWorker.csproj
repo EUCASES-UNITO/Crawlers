@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B79D6C3-A2A3-40FF-81C2-04F5C3D95FFE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unito.EUCases.Crawlers.CorteCassazioneWorker</RootNamespace>
+    <AssemblyName>Unito.EUCases.Crawlers.CorteCassazioneWorker</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\1-tools\json60r6\Bin\Net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CorteCassazioneParameters.cs" />
+    <Compile Include="CorteCassazioneResult.cs" />
+    <Compile Include="CorteCassazioneWorker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unito.EUCases.Crawlers.CorteCassazione\Unito.EUCases.Crawlers.CorteCassazione.csproj">
+      <Project>{6011a713-85c2-453e-9238-ebd4a4326856}</Project>
+      <Name>Unito.EUCases.Crawlers.CorteCassazione</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.CrawlersUploader\Unito.EUCases.CrawlersUploader.csproj">
+      <Project>{f9e28449-c4fc-4f5b-ab88-5e51546cce54}</Project>
+      <Name>Unito.EUCases.CrawlersUploader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.Crawlers\Unito.EUCases.Crawlers.csproj">
+      <Project>{7ff63101-31b2-4d0e-a023-33bc31dc2c6c}</Project>
+      <Name>Unito.EUCases.Crawlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.Email\Unito.EUCases.Email.csproj">
+      <Project>{02d9eed7-21b7-46b6-b4fd-4c975b7e071e}</Project>
+      <Name>Unito.EUCases.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.Workers\Unito.EUCases.Workers.csproj">
+      <Project>{61cad3a9-8ed7-4d03-acf8-56035beb88e3}</Project>
+      <Name>Unito.EUCases.Workers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

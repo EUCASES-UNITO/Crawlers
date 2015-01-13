@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{474B4BAD-80E0-47FA-9080-712C128F3D85}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unito.EUCases.Crawlers.GiustiziaAmministrativaWorker</RootNamespace>
+    <AssemblyName>Unito.EUCases.Crawlers.GiustiziaAmministrativaWorker</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GiustiziaAmministativaResults.cs" />
+    <Compile Include="GiustiziaAmministrativaForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiustiziaAmministrativaForms.Designer.cs">
+      <DependentUpon>GiustiziaAmministrativaForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiustiziaAmministrativaParameters.cs" />
+    <Compile Include="GiustiziaAmministrativaWorker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unito.EUCases.Crawlers.GiustiziaAmministrativa\Unito.EUCases.Crawlers.GiustiziaAmministrativa.csproj">
+      <Project>{f780d9b7-d03f-4ced-85a4-1318e6e1decc}</Project>
+      <Name>Unito.EUCases.Crawlers.GiustiziaAmministrativa</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.CrawlersUploader\Unito.EUCases.CrawlersUploader.csproj">
+      <Project>{f9e28449-c4fc-4f5b-ab88-5e51546cce54}</Project>
+      <Name>Unito.EUCases.CrawlersUploader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.Crawlers\Unito.EUCases.Crawlers.csproj">
+      <Project>{7ff63101-31b2-4d0e-a023-33bc31dc2c6c}</Project>
+      <Name>Unito.EUCases.Crawlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.Email\Unito.EUCases.Email.csproj">
+      <Project>{02d9eed7-21b7-46b6-b4fd-4c975b7e071e}</Project>
+      <Name>Unito.EUCases.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unito.EUCases.Workers\Unito.EUCases.Workers.csproj">
+      <Project>{61cad3a9-8ed7-4d03-acf8-56035beb88e3}</Project>
+      <Name>Unito.EUCases.Workers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GiustiziaAmministrativaForms.resx">
+      <DependentUpon>GiustiziaAmministrativaForms.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

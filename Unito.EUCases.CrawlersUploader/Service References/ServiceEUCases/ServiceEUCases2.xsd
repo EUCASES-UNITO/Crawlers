@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceEUCases" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceEUCases" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MetainfoEUCases" />
+  <xs:complexType name="UploadDocumentGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="MetaInfo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadDocumentGroup" nillable="true" type="tns:UploadDocumentGroup" />
+  <xs:complexType name="UploadDocumentGroupComplex">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MetainfoEUCases" minOccurs="0" name="MetaInfo" nillable="true" type="q1:XmlDocumentGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadDocumentGroupComplex" nillable="true" type="tns:UploadDocumentGroupComplex" />
+</xs:schema>

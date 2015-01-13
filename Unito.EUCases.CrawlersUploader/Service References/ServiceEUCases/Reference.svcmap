@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d9080ba1-5406-422c-8380-c738175ecb1a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceEUCases3.xsd" MetadataType="Schema" ID="3210bd7a-0e02-4cfb-9d6b-09bb9434eaba" SourceId="1" SourceUrl="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceEUCases.wsdl" MetadataType="Wsdl" ID="48d9f5e9-6119-42e5-8b3d-7048d037782c" SourceId="1" SourceUrl="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?wsdl" />
+    <MetadataFile FileName="ServiceEUCases1.xsd" MetadataType="Schema" ID="ebff7c4d-1695-43c4-9b8d-fe56ac60adc5" SourceId="1" SourceUrl="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceEUCases.xsd" MetadataType="Schema" ID="da0ffc85-5e1c-4b30-9751-4678c2005776" SourceId="1" SourceUrl="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceEUCases2.xsd" MetadataType="Schema" ID="17ca174d-ba51-4173-9af2-23626cf6cd9f" SourceId="1" SourceUrl="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceEUCases.disco" MetadataType="Disco" ID="2f252fe6-8d7b-46e2-b261-9fa0dd6e3ea3" SourceId="1" SourceUrl="http://techno.eucases.eu/CrawlerService/ServiceEUCases.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
