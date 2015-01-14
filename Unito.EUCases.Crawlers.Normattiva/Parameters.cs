@@ -24,7 +24,7 @@ namespace Unito.EUCases.Crawlers.Normattiva
                 if (int.Equals(_startMonth, value))
                     return;
                 _startMonth = value;
-                OnPropertyChanged("StartMonth");
+                OnPropertyChanged("StartMonth"); 
             }
         }
 
